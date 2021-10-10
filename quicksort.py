@@ -34,11 +34,18 @@ def Quicksort(A, start, end):
 if __name__ == '__main__':
  
     print("QUICKSORT ALGORITHM! \n".center(columns))
-    array = input("Please input the numbers separated by commas: ").split(",")
-    array = [int(x) for x in array]
-    n = len(array)
+    while True:
+	    array = input("Please input the numbers separated by commas: ").split(",")
+	    array = [int(x) for x in array]
+	    n = len(array)
 
-    Quicksort(array, 0, n - 1)
+	    Quicksort(array, 0, n - 1)
 
-    # print the sorted list
-    print(array)
+	    # print the sorted list
+	    print(array)
+
+	    ask = input("\nWanna Continue? [y/n]").lower()
+	    if ask == "y":
+	    	continue
+	    elif ask == "n":
+	    	exit()
